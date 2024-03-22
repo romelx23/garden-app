@@ -1,4 +1,4 @@
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { defineStore } from "pinia";
 import { toast } from "vue-sonner";
 
@@ -205,7 +205,7 @@ export const usePlantsStore = defineStore("plants", () => {
   }
 
   function deletePlant({ id }: DeletePlant) {
-    plants.value = plants.value.filter((p, index) => p.id !== id);
+    plants.value = plants.value.filter((p) => p.id !== id);
   }
 
   // funciones para agregar a mis plantas
